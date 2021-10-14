@@ -13,7 +13,7 @@
     
     <div class="item active">
     
-<img alt="Banner" style="width:100%" src="https://www.howtocraftnetwork.co.uk/gallery-images/74.jpg">
+<img alt="Banner" style="width:100%" src="/gallery-images/74.jpg">
 	
 	
     </div>
@@ -93,7 +93,7 @@ a .banner-block:hover{ background:#BE5886 }
 	    
 	    
 	<div class="pc-product-image">
-		<a href="https://www.howtocraftnetwork.co.uk/product/tv-thirsty-brush-unltd-a5-die-build-a-bloom-041021j">
+		<a href="/product/tv-thirsty-brush-unltd-a5-die-build-a-bloom-041021j">
 		<img  id="thumb-5067" src="https://www.stampsbyme.co.uk/console/productimages/5067.jpg" style="width: 100%;">
 		</a>
 	</div>
@@ -125,7 +125,7 @@ a .banner-block:hover{ background:#BE5886 }
 		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5067">
 		    
 			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="https://www.howtocraftnetwork.co.uk/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
+			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
 		    
 		    </div>
 		    
@@ -142,7 +142,7 @@ a .banner-block:hover{ background:#BE5886 }
 	    
 	    
 	<div class="pc-product-image">
-		<a href="https://www.howtocraftnetwork.co.uk/product/tv-thirsty-brush-unltd-a5-die-fancy-flowers-041021i">
+		<a href="/product/tv-thirsty-brush-unltd-a5-die-fancy-flowers-041021i">
 		<img  id="thumb-5066" src="https://www.stampsbyme.co.uk/console/productimages/5066.jpg" style="width: 100%;">
 		</a>
 	</div>
@@ -173,7 +173,7 @@ a .banner-block:hover{ background:#BE5886 }
 		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5066">
 		    
 			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="https://www.howtocraftnetwork.co.uk/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
+			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
 		    
 		    </div>
 		    
@@ -193,7 +193,7 @@ a .banner-block:hover{ background:#BE5886 }
 	    
 	    
 	<div class="pc-product-image">
-		<a href="https://www.howtocraftnetwork.co.uk/product/100099-htcn-creative-bundle-081021c">
+		<a href="/product/100099-htcn-creative-bundle-081021c">
 		<img  id="thumb-5022" src="https://www.stampsbyme.co.uk/console/productimages/5022.jpg" style="width: 100%;">
 		</a>
 	</div>
@@ -224,7 +224,7 @@ a .banner-block:hover{ background:#BE5886 }
 		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5022">
 		    
 			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="https://www.howtocraftnetwork.co.uk/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
+			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
 		    
 		    </div>
 		    
@@ -241,7 +241,7 @@ a .banner-block:hover{ background:#BE5886 }
 	    
 	    
 	<div class="pc-product-image">
-		<a href="https://www.howtocraftnetwork.co.uk/product/100094-htcn-3-x-stamps-by-me-a5-die-bundle-011021b">
+		<a href="/product/100094-htcn-3-x-stamps-by-me-a5-die-bundle-011021b">
 		<img  id="thumb-5013" src="https://www.stampsbyme.co.uk/console/productimages/5013.jpg" style="width: 100%;">
 		</a>
 	</div>
@@ -272,7 +272,7 @@ a .banner-block:hover{ background:#BE5886 }
 		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5013">
 		    
 			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="https://www.howtocraftnetwork.co.uk/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
+			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
 		    
 		    </div>
 		    

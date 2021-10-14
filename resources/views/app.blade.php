@@ -2,19 +2,19 @@
 <!DOCTYPE HTML>
 <head>
 <title>Larvel Ecomm Store</title>
-<link href="https://www.howtocraftnetwork.co.uk/images/logo.png" rel="icon">
+<link href="/images/logo.png" rel="icon">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://www.howtocraftnetwork.co.uk/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://www.howtocraftnetwork.co.uk/css/padding.css" />
-    <link rel="stylesheet" type="text/css" href="https://www.howtocraftnetwork.co.uk/css/styles.css?v=7" />
-    <link rel="stylesheet" type="text/css" href="https://www.howtocraftnetwork.co.uk/font-awesome/css/font-awesome.css" />
-    <script src="https://www.howtocraftnetwork.co.uk/js/jquery-1.11.3.min.js"></script>
-    <link rel="stylesheet" href="https://www.howtocraftnetwork.co.uk/lightbox/dist/css/lightbox.css">
-    <script src="https://www.howtocraftnetwork.co.uk/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
-    <script src="https://www.howtocraftnetwork.co.uk/js/jquery.matchHeight-min.js"></script>
-    <script src="https://www.howtocraftnetwork.co.uk/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/padding.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css?v=7" />
+    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css" />
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="/lightbox/dist/css/lightbox.css">
+    <script src="/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="/js/jquery.matchHeight-min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <style>
 
         #q::-ms-clear {
@@ -205,7 +205,7 @@
             </div>
             <div class="col-md-6">
 
-                <a href="https://www.howtocraftnetwork.co.uk/basket">
+                <a href="/basket">
                     <div style="width: fit-content;position: relative;height: auto;float: right">
                         <div class="same-nav-cart-block" style="float:left;margin-right: 20px;margin-top:5px">
                             <i class="fas fa-shopping-cart"></i>
@@ -219,7 +219,7 @@
 
                 <div style="float: right;position: relative;top:8px;left:-50px;">
                      <span class="pr-20" style="font-size: 13px;font-weight: 600;">
-                                            <a href="https://www.howtocraftnetwork.co.uk/login" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-user"></i> Sign In</a>
+                                            <a href="/login" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-user"></i> Sign In</a>
                                         </span>
                     
                                         </div>
@@ -227,7 +227,7 @@
 		
 		<div style="float: right;position: relative;top:8px;left:-150px;display:none">
 		
-		<a href="https://www.howtocraftnetwork.co.uk/wishlist" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-heart"></i> 1</a>
+		<a href="/wishlist" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-heart"></i> 1</a>
                     
 		</div>
 		
@@ -243,12 +243,12 @@
 
 <div class="container-fluid visible-md visible-lg " style="padding: 0 !important;">
 
-<form action="https://www.howtocraftnetwork.co.uk/search" method="get" id="search1-form">
+<form action="/search" method="get" id="search1-form">
     <div class="container">
         <div class="row">
             <div class="col-md-2 pt-10">
-                <a href="https://www.howtocraftnetwork.co.uk">
-                    <img src="https://www.howtocraftnetwork.co.uk/images/logo2.jpg" width="85%">
+                <a href="">
+                    <img src="/images/logo2.jpg" width="85%">
                 </a>
 
             </div>
@@ -296,28 +296,28 @@
             <ul class="nav navbar-nav">
                 <li class="link ">
 
-                    <a class="visible-lg" href="https://www.howtocraftnetwork.co.uk">Home</a>
-                    <a class="hidden-lg" href="https://www.howtocraftnetwork.co.uk">Home</a>
+                    <a class="visible-lg" href="">Home</a>
+                    <a class="hidden-lg" href="">Home</a>
                 </li>
                 <li class="link ">
 
-                    <a class="visible-lg" href="https://www.howtocraftnetwork.co.uk/about-us">About Us</a>
-                    <a class="hidden-lg" href="https://www.howtocraftnetwork.co.uk/about-us">About Us</a>
+                    <a class="visible-lg" href="/about-us">About Us</a>
+                    <a class="hidden-lg" href="/about-us">About Us</a>
                 </li>
                 <li class="link ">
 
-                    <a class="visible-lg" href="https://www.howtocraftnetwork.co.uk/latest-videos">Latest Videos</a>
-                    <a class="hidden-lg" href="https://www.howtocraftnetwork.co.uk/latest-videos">Latest Videos</a>
+                    <a class="visible-lg" href="/latest-videos">Latest Videos</a>
+                    <a class="hidden-lg" href="/latest-videos">Latest Videos</a>
                 </li>
                 <li class="link ">
 
-                    <a class="visible-lg" href="https://www.howtocraftnetwork.co.uk/previous-videos">Videos Last 2 Weeks</a>
-                    <a class="hidden-lg" href="https://www.howtocraftnetwork.co.uk/previous-videos">Videos Last 2 Weeks</a>
+                    <a class="visible-lg" href="/previous-videos">Videos Last 2 Weeks</a>
+                    <a class="hidden-lg" href="/previous-videos">Videos Last 2 Weeks</a>
                 </li>
                 <li class="link ">
 
-                    <a class="visible-lg" href="https://www.howtocraftnetwork.co.uk/contact">Contact</a>
-                    <a class="hidden-lg" href="https://www.howtocraftnetwork.co.uk/contact">Contact</a>
+                    <a class="visible-lg" href="/contact">Contact</a>
+                    <a class="hidden-lg" href="/contact">Contact</a>
                 </li>
             </ul>
 
@@ -331,7 +331,7 @@
 <div class="hidden-md hidden-lg text-right pr-15 pt-7" style="width:100%;background:#CB889A;height:35px;font-size:16px">
 
           
-                <a style="color:#fff !important;text-decoration:none !important" href="https://www.howtocraftnetwork.co.uk/login"><i class="fa fa-user"></i> Sign in</a>
+                <a style="color:#fff !important;text-decoration:none !important" href="/login"><i class="fa fa-user"></i> Sign in</a>
        
             
 </div>
@@ -355,8 +355,8 @@
 
     <div class="container no-padding pr-6 pl-6">
 
-        <a href="https://www.howtocraftnetwork.co.uk">
-            <img alt="logo" class="mobile-logo" src="https://www.howtocraftnetwork.co.uk/images/logo2.jpg">
+        <a href="">
+            <img alt="logo" class="mobile-logo" src="/images/logo2.jpg">
         </a>
 
         <div class="navbar-header">	
@@ -390,10 +390,10 @@
 
             <button style="position: absolute;right:60px;top:62%;transform: translate(0,-75%);margin-right: 5px !important;" type="button" class="navbar-toggle collapsed pt-5 pb-5 white">
                 <span class="sr-only">Toggle navigation</span>
-                <a id="count_items_mobile" style="color:#fff" class="white" href="https://www.howtocraftnetwork.co.uk/basket"> <i class="fa fa-shopping-cart white"></i> 0 </a>
+                <a id="count_items_mobile" style="color:#fff" class="white" href="/basket"> <i class="fa fa-shopping-cart white"></i> 0 </a>
             </button>
 	    
-            <button id="sbm-shop-button" style="position: absolute;left:95px;top:62%;transform: translate(0,-75%);margin-right: 5px !important;" type="button" class="navbar-toggle pt-5 pb-5 white"><a style="color:#fff" class="white" href="https://www.howtocraftnetwork.co.uk/sbm-shop">SBM Shop</a></button>
+            <button id="sbm-shop-button" style="position: absolute;left:95px;top:62%;transform: translate(0,-75%);margin-right: 5px !important;" type="button" class="navbar-toggle pt-5 pb-5 white"><a style="color:#fff" class="white" href="/sbm-shop">SBM Shop</a></button>
 
 
         </div>
@@ -404,35 +404,35 @@
     <ul class="nav navbar-nav mt-0 mb-10 pt-10 pb-10">
         <li class="link ">
 
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk">Home</a>
+            <a class="visible-sm visible-xs" href="">Home</a>
         </li>
         <li class="link ">
 
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/about-us">About us</a>
+            <a class="visible-sm visible-xs" href="/about-us">About us</a>
         </li>
         <li class="link ">
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/catch-up-tv">Catch Up TV</a>
+            <a class="visible-sm visible-xs" href="/catch-up-tv">Catch Up TV</a>
         </li>
         <li class="link ">
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/tv-schedule">TV Schedule</a>
+            <a class="visible-sm visible-xs" href="/tv-schedule">TV Schedule</a>
         </li>
         <li class="link ">
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/awesome-deals">Awesome Deals</a>
+            <a class="visible-sm visible-xs" href="/awesome-deals">Awesome Deals</a>
         </li>
         <li class="link ">
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/video-gallery">Video Gallery</a>
+            <a class="visible-sm visible-xs" href="/video-gallery">Video Gallery</a>
         </li>
         <li class="link ">
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/sbm-shop">SBM Shop</a>
+            <a class="visible-sm visible-xs" href="/sbm-shop">SBM Shop</a>
         </li>
 	
 	        <li class="link ">
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/loyalty-points">Loyalty Scheme</a>
+            <a class="visible-sm visible-xs" href="/loyalty-points">Loyalty Scheme</a>
         </li>
 		
         <li class="link ">
 
-            <a class="visible-sm visible-xs" href="https://www.howtocraftnetwork.co.uk/contact">Contact</a>
+            <a class="visible-sm visible-xs" href="/contact">Contact</a>
         </li>
 
 
@@ -527,7 +527,7 @@
 
     <div class="row mt-10">
 
-        <form action="https://www.howtocraftnetwork.co.uk/search" method="get">
+        <form action="/search" method="get">
 	
 	
                     <div class="text-center mt-10" style="display:block;height:60px">
@@ -690,11 +690,11 @@
             <div class="col-md-3 text-center-mob">
                 <div class=" " >
                     <p style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Information</p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk">Home</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/about-us">About Us</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/contact">Contact</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/sbm-shop">SBM Shop</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/loyalty-points">Loyalty Scheme</a></p>
+                    <p style="font-size: 14px;" class=""><a href="">Home</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/about-us">About Us</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/contact">Contact</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/sbm-shop">SBM Shop</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/loyalty-points">Loyalty Scheme</a></p>
 
                 </div>
 
@@ -702,19 +702,19 @@
             <div class="col-md-3 text-center-mob">
 
 		<p class="hidden-xs hidden-sm" style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Information</p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/catch-up-tv">Catch Up TV</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/tv-schedule">TV Schedule</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/awesome-deals">Awesome Deals</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/video-gallery">Video Gallery</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/catch-up-tv">Catch Up TV</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/tv-schedule">TV Schedule</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/awesome-deals">Awesome Deals</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/video-gallery">Video Gallery</a></p>
 
                 
             </div>
 
             <div class="col-md-3 text-center-mob mt-40-mob">
                     <p style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Extras</p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/privacy">Privacy Policy</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/cookies">Cookie Policy</a></p>
-                    <p style="font-size: 14px;" class=""><a href="https://www.howtocraftnetwork.co.uk/delivery">Delivery Information</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/privacy">Privacy Policy</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/cookies">Cookie Policy</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/delivery">Delivery Information</a></p>
             </div>
 	    
             <div class="col-md-3 mt-40-mob">
