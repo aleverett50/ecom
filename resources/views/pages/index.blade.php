@@ -2,6 +2,14 @@
 
 @section('content')
 
+<!--
+{{ session('shipping') }}
+@if ( session()->has('key') )
+
+
+
+@endif
+-->
     <div class="container-fluid pt-20">
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
