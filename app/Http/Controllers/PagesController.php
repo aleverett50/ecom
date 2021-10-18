@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class PagesController extends Controller
 {
@@ -11,11 +12,9 @@ class PagesController extends Controller
     public function index()
     {
 
-        // session(['key'=> 'hello']);
-        // session()->forget('key');
-        // print session('key');
+        $products = Product::all();
 
-        return view('pages.index');
+        return view('pages.index')->with('products', $products);
 
     }
 

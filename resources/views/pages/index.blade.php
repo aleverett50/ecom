@@ -21,7 +21,7 @@
     
     <div class="item active">
     
-<img alt="Banner" style="width:100%" src="/gallery-images/74.jpg">
+<img alt="Banner" style="width:100%" src="/images/74.jpg">
 	
 	
     </div>
@@ -74,11 +74,7 @@ a .banner-block:hover{ background:#BE5886 }
 
 }
 
-</style>
-    
-
-    
-    
+</style>    
 
 
 
@@ -94,203 +90,44 @@ a .banner-block:hover{ background:#BE5886 }
     <div class="container mb-30 pt-50 pb-0">
 
         <div class="row" style="grid-auto-flow: column;">
-	
+
+        @foreach($products as $product)
 		
-            <div class="product-item col-md-3 pc-product-holder pb-50" style="position:relative">
-	    
+    <div class="product-item col-md-3 pc-product-holder pb-50" style="position:relative">
 	    
 	    
 	<div class="pc-product-image">
-		<a href="/product/tv-thirsty-brush-unltd-a5-die-build-a-bloom-041021j">
-		<img  id="thumb-5067" src="https://www.stampsbyme.co.uk/console/productimages/5067.jpg" style="width: 100%;">
+		<a href="/product/{{ $product->slug }}">
+		<img src="/product-images/{{ $product->id }}.jpg" class="img-responsive">
 		</a>
 	</div>
-                <div style="float:left;" class="mt-10 mb-20">
+      
 		
 		<div class="pc-product-title-holder">
 		
-                    <p class="pc-product-title pb-20" style="font-size: 13px;font-weight: 600;text-align:center">TV - THIRSTY BRUSH UNLTD - A5 DIE - BUILD A BLOOM - 041021j</p>
-		    
-
+        <p class="pc-product-title pb-20 text-center pt-20" style="font-size: 13px;font-weight: 600">{{ $product->title }}</p>
 						
 		</div>
 		    
 		    
 		    <div class="row mb-30">
 		    
-			<div class="col-md-6"> &pound;16.99  </div>
+			<div class="col-md-6"> &pound;{{ $product->price }}  </div>
 			<div class="col-md-6"> 
 			
-
-			<a data-id="5067" data-device="pc" data-wishlist="0" style="width:100%" class="btn btn-primary buy-button">BUY</a>
-			
+			<a href="/product/{{ $product->slug }}" style="width:100%" class="btn btn-primary">VIEW</a>
 						
 			</div>
 		    
 		    </div>
-		    
 
-		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5067">
-		    
-			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
-		    
-		    </div>
-		    
-		
-                 
-                </div>
 
 
             </div>
 
-		
-            <div class="product-item col-md-3 pc-product-holder pb-50" style="position:relative">
-	    
-	    
-	    
-	<div class="pc-product-image">
-		<a href="/product/tv-thirsty-brush-unltd-a5-die-fancy-flowers-041021i">
-		<img  id="thumb-5066" src="https://www.stampsbyme.co.uk/console/productimages/5066.jpg" style="width: 100%;">
-		</a>
-	</div>
-                <div style="float:left;" class="mt-10 mb-20">
-		
-		<div class="pc-product-title-holder">
-		
-                    <p class="pc-product-title pb-20" style="font-size: 13px;font-weight: 600;text-align:center">TV - THIRSTY BRUSH UNLTD - A5 DIE - FANCY FLOWERS - 041021i</p>
-	
-						
-		</div>
-		    
-		    
-		    <div class="row mb-30">
-		    
-			<div class="col-md-6"> &pound;16.99  </div>
-			<div class="col-md-6"> 
-			
-
-			<a data-id="5066" data-device="pc" data-wishlist="0" style="width:100%" class="btn btn-primary buy-button">BUY</a>
-			
-						
-			</div>
-		    
-		    </div>
-		    
-
-		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5066">
-		    
-			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
-		    
-		    </div>
-		    
-		
-                 
-                </div>
-
-
-            </div>
+            @endforeach
 
 		
-
-
-		
-            <div class="product-item col-md-3 pc-product-holder pb-50" style="position:relative">
-	    
-	    
-	    
-	<div class="pc-product-image">
-		<a href="/product/100099-htcn-creative-bundle-081021c">
-		<img  id="thumb-5022" src="https://www.stampsbyme.co.uk/console/productimages/5022.jpg" style="width: 100%;">
-		</a>
-	</div>
-                <div style="float:left;" class="mt-10 mb-20">
-		
-		<div class="pc-product-title-holder">
-		
-                    <p class="pc-product-title pb-20" style="font-size: 13px;font-weight: 600;text-align:center">100099 - HTCN - CREATIVE BUNDLE - 081021c</p>
-		    
-						
-		</div>
-		    
-		    
-		    <div class="row mb-30">
-		    
-			<div class="col-md-6"> <strike>&pound;48.93</strike><br /><span style="color:#ff0000">&pound;34.99</span>  </div>
-			<div class="col-md-6"> 
-			
-
-			<a data-id="5022" data-device="pc" data-wishlist="0" style="width:100%" class="btn btn-primary buy-button">BUY</a>
-			
-						
-			</div>
-		    
-		    </div>
-		    
-
-		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5022">
-		    
-			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
-		    
-		    </div>
-		    
-		
-                 
-                </div>
-
-
-            </div>
-
-		
-            <div class="product-item col-md-3 pc-product-holder pb-50" style="position:relative">
-	    
-	    
-	    
-	<div class="pc-product-image">
-		<a href="/product/100094-htcn-3-x-stamps-by-me-a5-die-bundle-011021b">
-		<img  id="thumb-5013" src="https://www.stampsbyme.co.uk/console/productimages/5013.jpg" style="width: 100%;">
-		</a>
-	</div>
-                <div style="float:left;" class="mt-10 mb-20">
-		
-		<div class="pc-product-title-holder">
-		
-                    <p class="pc-product-title pb-20" style="font-size: 13px;font-weight: 600;text-align:center">100094 - HTCN - 3 X STAMPS BY ME A5 DIE BUNDLE - 011021b</p>
-		    
-						
-		</div>
-		    
-		    
-		    <div class="row mb-30">
-		    
-			<div class="col-md-6"> <strike>&pound;53.97</strike><br /><span style="color:#ff0000">&pound;19.99</span>  </div>
-			<div class="col-md-6"> 
-			
-
-			<a data-id="5013" data-device="pc" data-wishlist="0" style="width:100%" class="btn btn-primary buy-button">BUY</a>
-			
-						
-			</div>
-		    
-		    </div>
-		    
-
-		    <div style="display:none;margin-top:-20px" class="row ml-0 added-message-5013">
-		    
-			<div class="col-md-8 alert alert-success pt-3 pb-3" style="border-radius:0">Added <i class="fa fa-check"></i>  </div>
-			<div class="col-md-4"> <a class="btn btn-primary pull-right pt-4 pb-4" href="/basket"><i class="fa fa-shopping-cart"></i></a>  </div>
-		    
-		    </div>
-		    
-		
-                 
-                </div>
-
-
-            </div>
-
 		    
         </div>
 

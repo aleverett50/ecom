@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-md-6">
                 <span style="position: relative;top:8px;">
-                    <span><i class="far fa-envelope pr-5" style="color:#cb889a;font-size: 12px;position: relative;top:1px;"></i> <span style="font-weight: 600;font-size: 12px;"><a href="mailto:info@howtocraftnetwork.com">info@howtocraftnetwork.com</a></span></span>
+                    <span><i class="far fa-envelope pr-5" style="color:#cb889a;font-size: 12px;position: relative;top:1px;"></i> <span style="font-weight: 600;font-size: 12px;"><a href="mailto:info@">info@</a></span></span>
                 </span>
 
 		
@@ -212,7 +212,7 @@
                         </div>
                         <div class="same-nav-cart-block" style="float:left;">
                             <p style="font-weight: 900;font-size: 13px;margin-bottom:-3px !important;margin-top:5px">My Cart</p>
-                            <span id="count_items" style="font-weight: 900;font-size: 13px;color:#c6c6c6">0 item(s)</span>
+                            <span id="count_items" style="font-weight: 900;font-size: 13px;color:#c6c6c6">{{ $cartCount }} item(s)</span>
                         </div>
                     </div>
                 </a>
@@ -248,7 +248,7 @@
         <div class="row">
             <div class="col-md-2 pt-10">
                 <a href="">
-                    <img src="/images/logo2.jpg" width="85%">
+                    <img src="/images/logo-search-grid-desktop.png" width="100%">
                 </a>
 
             </div>
@@ -356,7 +356,7 @@
     <div class="container no-padding pr-6 pl-6">
 
         <a href="">
-            <img alt="logo" class="mobile-logo" src="/images/logo2.jpg">
+            <img alt="logo" class="mobile-logo" src="/images/logo-search-grid-desktop.png">
         </a>
 
         <div class="navbar-header">	
@@ -390,10 +390,9 @@
 
             <button style="position: absolute;right:60px;top:62%;transform: translate(0,-75%);margin-right: 5px !important;" type="button" class="navbar-toggle collapsed pt-5 pb-5 white">
                 <span class="sr-only">Toggle navigation</span>
-                <a id="count_items_mobile" style="color:#fff" class="white" href="/basket"> <i class="fa fa-shopping-cart white"></i> 0 </a>
+                <a id="count_items_mobile" style="color:#fff" class="white" href="/basket"> <i class="fa fa-shopping-cart white"></i> {{ $cartCount }} </a>
             </button>
 	    
-            <button id="sbm-shop-button" style="position: absolute;left:95px;top:62%;transform: translate(0,-75%);margin-right: 5px !important;" type="button" class="navbar-toggle pt-5 pb-5 white"><a style="color:#fff" class="white" href="/sbm-shop">SBM Shop</a></button>
 
 
         </div>
@@ -636,6 +635,15 @@
             $('.same-height').matchHeight({byRow: false});
         });
     </script>
+
+
+@if(session()->has('success'))
+<div class="container pt-10">
+    <p class="alert alert-success text-center">{{ session('success') }} <i class="fa fa-check"></i></p>
+</div>
+@endif
+
+
 
 
 @yield('content')
