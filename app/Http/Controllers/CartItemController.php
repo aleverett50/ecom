@@ -10,7 +10,13 @@ class CartItemController extends Controller
 {
 
 
+    public function index()
+    {
 
+        $cart = CartItem::where('unique_id', session('unique_id'))->get();
+        return view('basket')->with('cart', $cart);
+
+    }
 
 
 
@@ -44,6 +50,46 @@ class CartItemController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'The product has been added to your basket');
+
+    }
+
+
+    public function edit(Request $request, $id)
+    {
+
+        $row = CartItem::where('id', $id)->where('unique_id', session('unique_id'))->first();
+
+        if(!$row){
+
+            return redirect()->back()->with('error', 'You cannot edit this cart item');
+
+        } 
+
+        if( !$request->quantity ){
+            $row->delete();
+            return redirect()->back()->with('success', 'The cart item has been deleted');
+        }
+
+        $row->update(['quantity' => $request->quantity]);
+        return redirect()->back()->with('success', 'The cart item has been updated');
+
+    }
+
+
+    public function destroy($id)
+    {
+
+        $row = CartItem::where('id', $id)->where('unique_id', session('unique_id'))->first();
+
+        if(!$row){
+
+            return redirect()->back()->with('error', 'You cannot delete this cart item');
+
+        } 
+
+        $row->delete();
+        return redirect()->back()->with('success', 'The cart item has been deleted');
+
 
     }
 

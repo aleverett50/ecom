@@ -97,7 +97,7 @@
 
 
 														
-								<form action="{{route('insert-product')}}" method="post">
+								<form action="{{route('insertCartItem')}}" method="post">
 							
 								@csrf
 								<input type="hidden" name="product_id" value="{{$product->id}}">

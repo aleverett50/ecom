@@ -248,7 +248,7 @@
         <div class="row">
             <div class="col-md-2 pt-10">
                 <a href="">
-                    <img src="/images/logo-search-grid-desktop.png" width="100%">
+                    <a href="/"><img src="/images/logo-search-grid-desktop.png" width="100%"></a>
                 </a>
 
             </div>
@@ -644,6 +644,11 @@
 @endif
 
 
+@if(session()->has('error'))
+<div class="container pt-10">
+    <p class="alert alert-danger text-center"><i class="fa fa-times"></i> {{ session('error') }} </p>
+</div>
+@endif
 
 
 @yield('content')
