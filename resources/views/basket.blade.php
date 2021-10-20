@@ -105,14 +105,15 @@ $(function(){
 			<div class="col-md-12">
 
 		
-	<form action="" method="post" id="shipping-form">
+	<form action="basket" method="post" id="shipping-form">
+	@csrf
 	<select class="form-control" name="shipping" id="shipping">
 	
-		<option value="">Please Select Your Shipping Method</option>
-		<option value="3.99" selected>UK Mainland - Standard &pound;3.99</option>
-		<option value="4.99" >UK Mainland - Tracked &pound;4.99</option>
-		<option value="CollectInStore" >Collect in Store - FREE</option>
-						
+	<option value="">Please Select Your Shipping Method</option>
+	<option value="3.99"@if($shipping == 3.99) selected @endif>UK Mainland - Standard &pound;3.99</option>
+	<option value="4.99"@if($shipping == 4.99) selected @endif>UK Mainland - Tracked &pound;4.99</option>
+	<option value="0.00"@if($shipping == 0.00) selected @endif>Collect in Store - FREE</option>
+					
 	</select>
 	</form>
 	
@@ -141,22 +142,22 @@ $(function(){
 	
 	</div> 
 	
-	<div class="col-md-6 text-right mb-10 mt-40-mob"><strong>Sub Total &pound;33.98</strong></div> 
+	<div class="col-md-6 text-right mb-10 mt-40-mob"><strong>Sub Total &pound;{{ number_format($sub_total, 2) }}</strong></div> 
 
 		
 	
 	<div class="col-md-6"></div> 
-	<div class="col-md-6 text-right mb-10"><strong>Shipping &pound;3.99</strong>
+	<div class="col-md-6 text-right mb-10"><strong>Shipping &pound;{{ number_format($shipping, 2) }}</strong>
 	</div> 
 	
 	
 	<div class="col-md-6"></div> 
-	<div class="col-md-6 text-right mb-10"><strong>Total &pound;37.97</strong></div> 
+	<div class="col-md-6 text-right mb-10"><strong>Total &pound;{{ number_format($total, 2) }}</strong></div> 
 	</div>
 	
 	<div class="col-md-6 pull-left col-xs-12 pr-0 pl-0 mt-20 visible-md visible-lg">
 	
-	<a href="https://www.howtocraftnetwork.co.uk" class="btn btn-primary"><i class="fa fa-chevron-left"></i> CONTINUE SHOPPING</a>
+	<a href="/" class="btn btn-primary"><i class="fa fa-chevron-left"></i> CONTINUE SHOPPING</a>
 	
 	</div>
 	

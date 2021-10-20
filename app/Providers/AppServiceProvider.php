@@ -28,7 +28,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        View::composer('*', function ($view) {
+        // 'app' is app.blade.php file. Use * to make available in all views.
+        View::composer('app', function ($view) {
 
             if(session()->has('unique_id')){
 

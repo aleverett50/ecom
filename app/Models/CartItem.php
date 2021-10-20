@@ -11,5 +11,13 @@ class CartItem extends Model
 
     protected $fillable = ['product_id', 'unique_id', 'price', 'quantity', 'title'];
 
+    public static function bespokeFunction()
+    {
+
+        return 'value';
+        // in controller - CartItem::bespokeFunction();
+
+    }
+
 
 }

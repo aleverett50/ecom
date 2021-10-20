@@ -5,16 +5,43 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CartItem;
 use App\Models\Product;
+use DB;
 
 class CartItemController extends Controller
 {
+
+    protected $shipping;
+    protected $sub_total;
+    protected $total;
+
+    public function __construct()
+    {
+        // need middleware so we can acess session()
+        $this->middleware(function ($request, $next){
+
+            $this->shipping = session()->has('shipping') 
+                            ? session('shipping') : 3.99;
+
+
+            $this->sub_total = CartItem::where('unique_id', session('unique_id'))
+            ->sum(DB::raw('price * quantity'));
+
+            $this->total = $this->sub_total + $this->shipping;
+
+            return $next($request);
+
+        });        
+
+    }
 
 
     public function index()
     {
 
         $cart = CartItem::where('unique_id', session('unique_id'))->get();
-        return view('basket')->with('cart', $cart);
+        return view('basket')->with('sub_total', $this->sub_total)
+        ->with('shipping', $this->shipping)->with('total', $this->total)->with('cart', $cart);
+
 
     }
 
@@ -57,6 +84,9 @@ class CartItemController extends Controller
     public function edit(Request $request, $id)
     {
 
+        // add new value to $request
+        //$request->merge(['new' => 'hello']);
+
         $row = CartItem::where('id', $id)->where('unique_id', session('unique_id'))->first();
 
         if(!$row){
@@ -90,6 +120,17 @@ class CartItemController extends Controller
         $row->delete();
         return redirect()->back()->with('success', 'The cart item has been deleted');
 
+
+    }
+
+
+    public function setShipping(Request $request)
+    {
+
+        if($request->shipping != ''){
+            session(['shipping'=> $request->shipping]);
+        }
+        return redirect()->back()->with('success', 'The shipping option has been updated');
 
     }
 
