@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\CartItem;
+use DB;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -43,6 +44,28 @@ class AppServiceProvider extends ServiceProvider
             
             $view->with('cartCount', $cartCount);
 
+        });
+
+
+        View::composer('basket', function ($view) {
+
+            if(session()->has('unique_id')){
+
+                $cart = CartItem::where('unique_id', session('unique_id'))->get();
+                $sub_total = CartItem::where('unique_id', session('unique_id'))
+                            ->sum(DB::raw('price * quantity'));
+
+            }else{
+
+                $cart = [];
+                $sub_total = 0;
+                
+            }
+
+            $view->with('cart', $cart)->with('sub_total', $sub_total);
+
+            
+            
         });
 
 

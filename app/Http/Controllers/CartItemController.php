@@ -14,6 +14,7 @@ class CartItemController extends Controller
     protected $sub_total;
     protected $total;
 
+    
     public function __construct()
     {
         // need middleware so we can acess session()
@@ -22,19 +23,15 @@ class CartItemController extends Controller
             $this->shipping = session()->has('shipping') 
                             ? session('shipping') : 3.99;
 
-
-            $this->sub_total = CartItem::where('unique_id', session('unique_id'))
-            ->sum(DB::raw('price * quantity'));
-
-            $this->total = $this->sub_total + $this->shipping;
-
             return $next($request);
 
         });        
 
     }
+    
 
 
+    /*
     public function index()
     {
 
@@ -44,7 +41,14 @@ class CartItemController extends Controller
 
 
     }
+    */
 
+    public function index()
+    {
+
+        return view('basket')->with('shipping', $this->shipping);
+
+    }
 
 
 
@@ -96,6 +100,9 @@ class CartItemController extends Controller
         } 
 
         if( !$request->quantity ){
+
+            /* delete if they update with zero qty */
+            
             $row->delete();
             return redirect()->back()->with('success', 'The cart item has been deleted');
         }
@@ -131,6 +138,14 @@ class CartItemController extends Controller
             session(['shipping'=> $request->shipping]);
         }
         return redirect()->back()->with('success', 'The shipping option has been updated');
+
+    }
+
+
+    public function checkout()
+    {
+
+        return view('checkout');      
 
     }
 

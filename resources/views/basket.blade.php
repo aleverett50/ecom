@@ -23,12 +23,11 @@ $(function(){
 
 <div class="container pb-70 pt-20">
 
-@if ($cart->count() == 0)
+@if ( !count($cart) )
 
 <p>Your basket is currently empty.</p>
 
 @else
-
 	
 <hr />
 
@@ -152,7 +151,7 @@ $(function(){
 	
 	
 	<div class="col-md-6"></div> 
-	<div class="col-md-6 text-right mb-10"><strong>Total &pound;{{ number_format($total, 2) }}</strong></div> 
+	<div class="col-md-6 text-right mb-10"><strong>Total &pound;{{ number_format($shipping + $sub_total, 2) }}</strong></div> 
 	</div>
 	
 	<div class="col-md-6 pull-left col-xs-12 pr-0 pl-0 mt-20 visible-md visible-lg">
