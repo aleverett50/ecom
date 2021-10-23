@@ -218,9 +218,35 @@
                 </a>
 
                 <div style="float: right;position: relative;top:8px;left:-50px;">
+
+@guest
+
                      <span class="pr-20" style="font-size: 13px;font-weight: 600;">
                                             <a href="/login" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-user"></i> Sign In</a>
                                         </span>
+
+@endguest
+
+@auth
+
+Welcome {{ auth()->user()->first_name }}
+
+&nbsp;&nbsp;&nbsp;
+
+                     <span class="pr-20" style="font-size: 13px;font-weight: 600;">
+                                            <a href="/account" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-user"></i> Account</a>
+                                        </span>
+
+
+                     <span class="pr-20" style="font-size: 13px;font-weight: 600;">
+                                            <a href="/logout" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-user"></i> Sign Out</a>
+                                        </span>
+
+@endauth
+
+
+
+
                     
                                         </div>
 		

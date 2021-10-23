@@ -21,6 +21,8 @@
 @csrf
 
 <div class="container pt-50 pb-50">
+
+@guest
 				
 				<div class="row">
 				
@@ -42,6 +44,9 @@
 				    
 				
 				</div>
+
+@endguest
+
 	    
 		<h2>Checkout - Delivery Address</h2> <br />
 
@@ -100,7 +105,8 @@
 	
 	$(function(){
 
-	$('#country').val("{{ old('country') }}");
+	//$('#country').val("{{ old('country') }}");
+    $('#country').val("GB");
 
 	});
 

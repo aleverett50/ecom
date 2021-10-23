@@ -11,11 +11,9 @@ class CartItemController extends Controller
 {
 
     protected $shipping;
-    protected $sub_total;
-    protected $total;
-
     
-    public function __construct()
+    
+    public function __construct(Request $request)
     {
         // need middleware so we can acess session()
         $this->middleware(function ($request, $next){
@@ -148,6 +146,7 @@ class CartItemController extends Controller
         return view('checkout');      
 
     }
+
 
 
 }

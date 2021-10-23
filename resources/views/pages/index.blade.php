@@ -10,11 +10,12 @@
 
 @endif
 -->
+<!--
     <div class="container-fluid pt-20">
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-                <!-- Wrapper for slides -->
+         
                 <div class="carousel-inner">
 
 
@@ -44,8 +45,6 @@
 }
 
 </style>
-
-                <!-- Left and right controls -->
 		
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                     <span class="fa fa-chevron-left"></span>
@@ -60,6 +59,8 @@
             </div>
         </div>
     </div>
+
+ -->
     
 <style>
 

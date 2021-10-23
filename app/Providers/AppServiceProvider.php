@@ -32,15 +32,7 @@ class AppServiceProvider extends ServiceProvider
         // 'app' is app.blade.php file. Use * to make available in all views.
         View::composer('app', function ($view) {
 
-            if(session()->has('unique_id')){
-
-                $cartCount = CartItem::where('unique_id', session('unique_id'))->sum('quantity');
-
-            }else{
-
-                $cartCount = 0;                
-
-            }
+            $cartCount = CartItem::where('unique_id', session('unique_id'))->sum('quantity');
             
             $view->with('cartCount', $cartCount);
 
@@ -49,22 +41,12 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('basket', function ($view) {
 
-            if(session()->has('unique_id')){
+            $cartItems = CartItem::where('unique_id', session('unique_id'));
 
-                $cart = CartItem::where('unique_id', session('unique_id'))->get();
-                $sub_total = CartItem::where('unique_id', session('unique_id'))
-                            ->sum(DB::raw('price * quantity'));
-
-            }else{
-
-                $cart = [];
-                $sub_total = 0;
-                
-            }
+            $cart = $cartItems->get();
+            $sub_total = $cartItems->sum(DB::raw('price * quantity'));
 
             $view->with('cart', $cart)->with('sub_total', $sub_total);
-
-            
             
         });
 
