@@ -269,7 +269,8 @@ Welcome {{ auth()->user()->first_name }}
 
 <div class="container-fluid visible-md visible-lg " style="padding: 0 !important;">
 
-<form action="/search" method="get" id="search1-form">
+<form action="/search/" method="get" id="search1-form">
+
     <div class="container">
         <div class="row">
             <div class="col-md-2 pt-10">
@@ -556,10 +557,7 @@ Welcome {{ auth()->user()->first_name }}
 	
 	
                     <div class="text-center mt-10" style="display:block;height:60px">
-		    
-				
-		    
-			<input  type="checkbox" id="searchVideosMob" name="seach_type_videos" value="yes"> <label style="cursor:pointer;font-size:13px" for="searchVideosMob">Videos</label>
+ <label style="cursor:pointer;font-size:13px" for="searchVideosMob">Videos</label>
 			&nbsp;
 			<input checked type="checkbox" id="searchProductsMob" name="seach_type_products" value="yes"> <label style="cursor:pointer;font-size:13px" for="searchProductsMob">Products</label>
 			

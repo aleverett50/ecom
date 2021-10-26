@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CustomerAccountController;
 
 Route::get('/', [PagesController::class, 'index'] )->name('home');
 Route::get('/product/{slug}', [ProductController::class, 'show'] )->name('product');
@@ -20,3 +21,5 @@ Route::put('/cart/{id}', [CartItemController::class, 'edit'] )->name('updateCart
 Route::get('/login', [LoginController::class, 'index'] )->name('loginPage');
 Route::post('/login', [LoginController::class, 'store'] )->name('login');
 Route::get('/logout', [LoginController::class, 'logout'] )->name('logout');
+Route::get('/account', [CustomerAccountController::class, 'index'] )->name('accountHome');
+Route::get('/search', [ProductController::class, 'search'] )->name('search');

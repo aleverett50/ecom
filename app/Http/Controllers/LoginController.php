@@ -8,6 +8,16 @@ class LoginController extends Controller
 {
 
 
+    public function __construct()
+    {
+
+        /*  add a guest middleware to redirect you to account if logged in */
+
+         $this->middleware('guest')->except('logout');
+
+    }
+
+
     public function index()
     {
 
@@ -30,7 +40,7 @@ class LoginController extends Controller
 
         if ( auth()->attempt($request->only('email', 'password')) ) {
            
-        return redirect()->route('login');
+        return redirect()->route('accountHome');
        
         }
     
