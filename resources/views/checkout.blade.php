@@ -2,16 +2,6 @@
 
 @section('content')
 
-@if (count($errors) > 0)
-<div class="container">
-<div class="alert alert-danger mt-20 mb-30">
-		@foreach ($errors->all() as $error)
-			<p><i class="fa fa-times"></i> {{ $error }}</p>
-		@endforeach
-</div>
-</div>
-@endif
-
 
 <div class="container-fluid page-heading">
         <h1>CHECKOUT</h1>

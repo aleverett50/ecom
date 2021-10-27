@@ -23,3 +23,18 @@ Route::post('/login', [LoginController::class, 'store'] )->name('login');
 Route::get('/logout', [LoginController::class, 'logout'] )->name('logout');
 Route::get('/account', [CustomerAccountController::class, 'index'] )->name('accountHome');
 Route::get('/search', [ProductController::class, 'search'] )->name('search');
+Route::get('/forgot-password', [LoginController::class, 'forgotPassword'] )->name('password.request');
+Route::post('/forgot-password', [LoginController::class, 'forgotPasswordPost'] )->name('forgot-password.post');
+Route::get('/reset-password/{token}', [LoginController::class, 'resetPassword'] )->name('password.reset');
+Route::post('/reset-password', [LoginController::class, 'resetPasswordPost'] )->name('password.reset.post');
+
+
+
+
+
+
+
+
+
+
+

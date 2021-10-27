@@ -662,15 +662,26 @@ Welcome {{ auth()->user()->first_name }}
 
 
 @if(session()->has('success'))
-<div class="container pt-10">
-    <p class="alert alert-success text-center">{{ session('success') }} <i class="fa fa-check"></i></p>
+<div class="container">
+    <p class="alert alert-success mt-20 mb-30">{{ session('success') }} <i class="fa fa-check"></i></p>
 </div>
 @endif
 
 
 @if(session()->has('error'))
-<div class="container pt-10">
-    <p class="alert alert-danger text-center"><i class="fa fa-times"></i> {{ session('error') }} </p>
+<div class="container">
+    <p class="alert alert-danger mt-20 mb-30"><i class="fa fa-times"></i> {{ session('error') }} </p>
+</div>
+@endif
+
+
+@if (count($errors) > 0)
+<div class="container">
+<div class="alert alert-danger mt-20 mb-30">
+        @foreach ($errors->all() as $error)
+            <p><i class="fa fa-times"></i> {{ $error }}</p>
+        @endforeach
+</div>
 </div>
 @endif
 
