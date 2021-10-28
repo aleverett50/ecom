@@ -3,6 +3,7 @@
 
 @section('content')
 
+{{ $order->user->first_name }}
 
     <div class="container-fluid page-heading">
         <h1>ORDER COMPLETE</h1>

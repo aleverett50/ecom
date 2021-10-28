@@ -108,7 +108,8 @@ return [
     */
 
     'markdown' => [
-        'theme' => 'default',
+    //    'theme' => 'default', default css file for emails. you can override this by publishing laravel-mail to your own resources/views/vendor/mail/html/themes/ directory. Then editing those email template files. My new css file is call mydefault.css - here you can change button colours css.
+          'theme' => 'default',
 
         'paths' => [
             resource_path('views/vendor/mail'),

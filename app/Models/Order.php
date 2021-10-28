@@ -4,12 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use App\Models\Order;
+use App\Models\User;
 use App\Models\OrderItem;
+use App\Notifications\SendConfirmationEmail;
 
 class Order extends Model
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $fillable = [
         'order_number', 'shipping', 'sub_total'
@@ -18,7 +21,7 @@ class Order extends Model
     public function user()
     {
 
-        return $this->hasOne(User::class);        
+        return $this->belongsTo(User::class);        
 
     }
 
@@ -28,5 +31,8 @@ class Order extends Model
         return $this->hasMany(OrderItem::class);
 
     }
+
+
+
 
 }

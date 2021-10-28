@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Order;
+use App\Notifications\CustomPasswordResetNotification;
 
 class User extends Authenticatable
 {
@@ -57,6 +58,32 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);        
 
     }
+
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CustomPasswordResetNotification($token));
+    }
+
+    public function sendInvoicePaid($user)
+    {
+
+
+
+        $user->notify(new InvoicePaid($user));   
+
+    }
+
+    
+
+
+
 
 
 }

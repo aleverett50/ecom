@@ -8,6 +8,8 @@
         <h1>FORGOT PASSWORD</h1>
     </div>
 
+
+
 <div class="container pt-40 pb-30">
 
 <p>Please enter your email address for reset link. <br /><br /></p>

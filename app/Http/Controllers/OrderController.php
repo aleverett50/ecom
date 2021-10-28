@@ -9,6 +9,9 @@ use App\Models\OrderItem;
 use App\Models\CartItem;
 use Illuminate\Support\Facades\Hash;
 use DB;
+use Notification;
+use App\Notifications\SendConfirmationEmail;
+
 
 class OrderController extends Controller
 {
@@ -144,7 +147,15 @@ class OrderController extends Controller
     public function complete()
     {
 
-        return view('complete');
+        $order = Order::find(1);
+
+        $order->cart = '<table style="width:100%"><tr><td><strong>Product</strong></td><td><strong>Price</strong></td><td><strong>Qty</strong></td><td><strong>Total</strong></td></tr><tr><td>Jumper</td><td>29.99</td><td>1</td><td>29.99</td></tr><tr><td></td><td>Sub Total</td><td></td><td>29.99</td><tr><tr><td></td><td>Shipping</td><td></td><td>0.00</td><tr><tr><td></td><td>Total</td><td></td><td>29.99</td><tr></table>';
+
+        /* to email address and to name comes from $order_user object */
+
+        Notification::send($order->user, new SendConfirmationEmail($order));
+
+        return view('complete')->with('order', $order);
 
     }
 
