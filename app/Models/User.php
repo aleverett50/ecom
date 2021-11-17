@@ -71,18 +71,6 @@ class User extends Authenticatable
         $this->notify(new CustomPasswordResetNotification($token));
     }
 
-    public function sendInvoicePaid($user)
-    {
-
-
-
-        $user->notify(new InvoicePaid($user));   
-
-    }
-
-    
-
-
 
 
 
