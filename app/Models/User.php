@@ -72,6 +72,18 @@ class User extends Authenticatable
     }
 
 
+	public function isAdmin(){
+	
+		if( isset($this->user_role) && $this->user_role === 2 ){
+		
+			return true;
+		
+		}
+		
+		return false;
+	
+	}
+
 
 
 }

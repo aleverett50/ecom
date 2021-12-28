@@ -32,6 +32,13 @@ class LoginController extends Controller
 
     public function logout()
     {
+    
+	if( auth()->user()->isAdmin() ){
+	
+		auth()->logout();
+		return redirect()->route('dashboard');
+	
+	}
 
         auth()->logout();
         return redirect()->route('login');

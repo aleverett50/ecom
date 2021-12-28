@@ -239,23 +239,19 @@ Welcome {{ auth()->user()->first_name }}
 
 
                      <span class="pr-20" style="font-size: 13px;font-weight: 600;">
-                                            <a href="/logout" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-user"></i> Sign Out</a>
+                                            <a href="/logout" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-sign-out-alt"></i> Sign Out</a>
                                         </span>
 
 @endauth
 
-
+                     <span class="pr-20" style="font-size: 13px;font-weight: 600;">
+                                            <a href="/dashboard" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none">Dashboard</a>
+                                        </span>
 
 
                     
                                         </div>
 		
-		
-		<div style="float: right;position: relative;top:8px;left:-150px;display:none">
-		
-		<a href="/wishlist" style="font-size: 12px;padding:7px;padding-top:6px !important;padding-bottom:6px !important;background:#CB889A;color:#fff;text-decoration:none"><i class="fa fa-heart"></i> 1</a>
-                    
-		</div>
 		
 		
             </div>
@@ -781,7 +777,7 @@ Welcome {{ auth()->user()->first_name }}
 		    
                 </div>
 		
-		<div class="col-md-6 mt-80 text-center visible-xs visible-sm"> <span style="color:#fff;font-size:14px">Copyright 2021 HTCN</span>  </div>
+		<div class="col-md-6 mt-80 text-center visible-xs visible-sm"> <span style="color:#fff;font-size:14px">Copyright {{ date('Y') }} Laravel</span>  </div>
      
 
         </div>
@@ -800,7 +796,7 @@ Welcome {{ auth()->user()->first_name }}
         <div class="row hidden-xs hidden-sm" style="color:white;padding-bottom: 5px !important;">
             <p class="text-right" style="font-weight: 900;font-size: 12px;">
                 <span class="mr-20">Copyright 2021 HTCN</span>
-                <span><a target="_blank" href="https://www.wtstechnologies.co.uk/" target="_blank">Web Design WTS Technologies</a></span>
+                <span><a target="_blank" href="" target="_blank">Web Design Alex Everett</a></span>
             </p>
         </div>
 	
