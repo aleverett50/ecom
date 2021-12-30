@@ -9,9 +9,10 @@
 
 <div class="container">
 
+@include('includes.accountNav')
+
 <br>
-<br>
-<br>
+
 <p>You can manage your orders and details here ...</p>
 
 <br>
