@@ -21,7 +21,7 @@ class OrderController extends Controller
 
 
       //  User::truncate();
-        Order::truncate();
+      Order::truncate();
         OrderItem::truncate();
 
         $cart = CartItem::where('unique_id', session('unique_id'));
@@ -147,15 +147,40 @@ class OrderController extends Controller
     public function complete()
     {
 
-        $order = Order::find(1);
+	if( session()->has('order_number') ){
 
-        $order->cart = '<table style="width:100%"><tr><td><strong>Product</strong></td><td><strong>Price</strong></td><td><strong>Qty</strong></td><td><strong>Total</strong></td></tr><tr><td>Jumper</td><td>29.99</td><td>1</td><td>29.99</td></tr><tr><td></td><td>Sub Total</td><td></td><td>29.99</td><tr><tr><td></td><td>Shipping</td><td></td><td>0.00</td><tr><tr><td></td><td>Total</td><td></td><td>29.99</td><tr></table>';
+		$order_id = session('order_number') - 100000;
 
-        /* to email address and to name comes from $order_user object */
+		$order = Order::find($order_id);
 
-        Notification::send($order->user, new SendConfirmationEmail($order));
+		$order->cart = '<table class="table" style="width:100%">
+					<tr><td><strong>Product</strong></td><td><strong>Price</strong></td><td><strong>Qty</strong></td><td><strong>Total</strong></td></tr>';
+		
+		$order_items = $order->order_item()->get();
+		
+		foreach( $order_items as $order_item ){
+		
+		$order->cart .= '<tr><td>'.$order_item->title.'</td><td>&pound;'.$order_item->price.'</td><td>'.$order_item->quantity.'</td><td>&pound;'.number_format($order_item->price * $order_item->quantity, 2).'</td></tr>';
+		
+		}
+		
+		
+		$order->cart .= '<tr><td></td><td>&nbsp;</td><td></td><td>&nbsp;</td></tr>
+					<tr><td></td><td>Sub Total</td><td></td><td>&pound;'.$order->sub_total.'</td></tr>
+					<tr><td></td><td>Shipping</td><td></td><td>&pound;'.$order->shipping.'</td></tr>
+					<tr><td></td><td>Total</td><td></td><td>&pound;'.number_format($order->sub_total + $order->shipping, 2).'</td><tr></table>';
+					
+					
 
-        return view('complete')->with('order', $order);
+		/* to email address and to name comes from $order->user object */
+
+	//        Notification::send($order->user, new SendConfirmationEmail($order));
+	  
+		return view('complete')->with('order', $order)->with('cart', $order->cart);
+
+	}
+
+        return view('complete');
 
     }
 

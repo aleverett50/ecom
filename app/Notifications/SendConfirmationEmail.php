@@ -50,8 +50,8 @@ class SendConfirmationEmail extends Notification
                     ->line('Thank you for your order.')
                     ->line('Your order number is '.$this->order->order_number)
                     ->line(new HtmlString($this->order->cart))
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->action('View Order', url('/account/orders'))
+                    ->line('Thank you for using our website!');
     }
 
     /**

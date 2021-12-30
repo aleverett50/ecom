@@ -18,9 +18,9 @@
 						<div class="panel-body">
 						
 								<div class="form-group">
-									<label class="col-md-4 control-label">Old Password</label>
+									<label class="col-md-4 control-label">Current Password</label>
 									<div class="col-md-6">
-										<input type="password" class="form-control" name="old_password">
+										<input type="password" class="form-control" name="current_password">
 									</div>
 								</div>
 								
@@ -31,6 +31,12 @@
 									</div>
 								</div>
 								
+								<div class="form-group">
+									<label class="col-md-4 control-label">Confirm Password</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" name="confirm_password">
+									</div>
+								</div>
 
 								<div class="form-group">
 									<div class="col-md-6 col-md-offset-4">

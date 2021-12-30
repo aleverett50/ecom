@@ -13,6 +13,9 @@
 
 <br>
 <br>
+
+@if(count($orders))
+
 <div class="table-responsive">
 
 	<table class="table table-hover">
@@ -21,7 +24,7 @@
 	
 	@foreach($orders as $order)
 	
-	<tr><td>{{ date('d/m/Y', strtotime($order->created_at)) }}</td><td>{{ $order->status }} - {{ $order->user_id }}</td><td>{{ $order->order_number }}</td><td>&pound;{{ number_format($order->sub_total + $order->shipping, 2) }}</td><td><a class="btn btn-primary" href="/account/order/{{ $order->id }}">View <i class="fa fa-arrow-right"></i></a></td></tr>
+	<tr><td>{{ date('d/m/Y', strtotime($order->created_at)) }}</td><td>{{ $order->status }} </td><td>{{ $order->order_number }}</td><td>&pound;{{ number_format($order->sub_total + $order->shipping, 2) }}</td><td><a class="btn btn-primary" href="/account/order/{{ $order->id }}">View <i class="fa fa-arrow-right"></i></a></td></tr>
 	
 	@endforeach
 	
@@ -29,6 +32,11 @@
 
 </div>	
 
+@else
+
+<p>You currently have no orders.</p>
+
+@endif
 
 <br>
 <br>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use Illuminate\Support\Facades\Hash;
 
 class CustomerAccountController extends Controller
 {
@@ -38,10 +39,33 @@ class CustomerAccountController extends Controller
     }
     
     
-    public function changePasswordPost()
+    public function changePasswordPost(Request $request)
     {
+    
+	$user = auth()->user();
+	
+	$userPassword = $user->password;
+	
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|same:confirm_password',
+            'confirm_password' => 'required',
 
-        return redirect()->route('accountHome');
+        ]);
+
+
+
+        if ( ! Hash::check( $request->current_password, $userPassword ) ) {
+	
+            return back()->withError('The current password you entered was incorrect');
+
+	}
+	
+        $user->password = Hash::make($request->password);
+
+        $user->save();
+
+        return redirect()->route('accountHome')->withSuccess('Your password has been changed');
 
     }
     
@@ -67,7 +91,7 @@ class CustomerAccountController extends Controller
 	$user = auth()->user();
 	$user->update($request->all());
 
-        return redirect()->route('accountOrders');
+        return redirect()->route('accountOrders')->withSuccess('Your details have been updated');
 
     }
     
@@ -94,7 +118,7 @@ class CustomerAccountController extends Controller
     
 	/* get all orders for logged in user using relationships $user->order() */
 	
-	$orders = auth()->user()->order()->get();
+	$orders = auth()->user()->order()->where('status', '!=', 'Pending')->get();
 
         return view('account.orders')->with('orders', $orders);
 

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!--
+
     <div class="container-fluid pt-20">
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -52,7 +52,7 @@
         </div>
     </div>
 
- -->
+ 
     
 <style>
 

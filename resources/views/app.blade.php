@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-md-6">
                 <span style="position: relative;top:8px;">
-                    <span><i class="far fa-envelope pr-5" style="color:#cb889a;font-size: 12px;position: relative;top:1px;"></i> <span style="font-weight: 600;font-size: 12px;"><a href="mailto:info@">info@</a></span></span>
+                    <span><i class="far fa-envelope pr-5" style="color:#cb889a;font-size: 12px;position: relative;top:1px;"></i> <span style="font-weight: 600;font-size: 12px;"><a href="mailto:info@">info@demosite.com</a></span></span>
                 </span>
 
 		
@@ -293,7 +293,7 @@ Welcome {{ auth()->user()->first_name }}
 
 		
             </div>
-            <div class="col-md-3">  test   </div>
+            <div class="col-md-3">     </div>
 
 
         </div>
@@ -731,37 +731,26 @@ Welcome {{ auth()->user()->first_name }}
         
 	<div class="container pt-30">
 
-            <div class="col-md-3 text-center-mob">
+            <div class="col-md-4 text-center-mob">
                 <div class=" " >
                     <p style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Information</p>
-                    <p style="font-size: 14px;" class=""><a href="">Home</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/">Home</a></p>
                     <p style="font-size: 14px;" class=""><a href="/about-us">About Us</a></p>
                     <p style="font-size: 14px;" class=""><a href="/contact">Contact</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/sbm-shop">SBM Shop</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/loyalty-points">Loyalty Scheme</a></p>
 
                 </div>
 
             </div>
-            <div class="col-md-3 text-center-mob">
 
-		<p class="hidden-xs hidden-sm" style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Information</p>
-                    <p style="font-size: 14px;" class=""><a href="/catch-up-tv">Catch Up TV</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/tv-schedule">TV Schedule</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/awesome-deals">Awesome Deals</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/video-gallery">Video Gallery</a></p>
 
-                
-            </div>
-
-            <div class="col-md-3 text-center-mob mt-40-mob">
+            <div class="col-md-4 text-center-mob mt-40-mob">
                     <p style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Extras</p>
                     <p style="font-size: 14px;" class=""><a href="/privacy">Privacy Policy</a></p>
                     <p style="font-size: 14px;" class=""><a href="/cookies">Cookie Policy</a></p>
                     <p style="font-size: 14px;" class=""><a href="/delivery">Delivery Information</a></p>
             </div>
 	    
-            <div class="col-md-3 mt-40-mob">
+            <div class="col-md-4 mt-40-mob">
                 <div id="">
                     <p style="font-weight: 900;font-size: 14px;color:#DFB9C2" class="footer-urls-block mb-mb-0 text-left">Follow Us</p>
                     <div class="mt-10 social-footer">
@@ -777,7 +766,7 @@ Welcome {{ auth()->user()->first_name }}
 		    
                 </div>
 		
-		<div class="col-md-6 mt-80 text-center visible-xs visible-sm"> <span style="color:#fff;font-size:14px">Copyright {{ date('Y') }} Laravel</span>  </div>
+		<div class="col-md-6 mt-80 text-center visible-xs visible-sm"> <span style="color:#fff;font-size:14px">Copyright {{ date('Y') }} Laravel Demo</span>  </div>
      
 
         </div>
@@ -795,7 +784,7 @@ Welcome {{ auth()->user()->first_name }}
 	
         <div class="row hidden-xs hidden-sm" style="color:white;padding-bottom: 5px !important;">
             <p class="text-right" style="font-weight: 900;font-size: 12px;">
-                <span class="mr-20">Copyright 2021 HTCN</span>
+                <span class="mr-20">Copyright {{ date('Y') }} Demo</span>
                 <span><a target="_blank" href="" target="_blank">Web Design Alex Everett</a></span>
             </p>
         </div>
