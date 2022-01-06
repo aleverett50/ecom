@@ -17,6 +17,21 @@ class PagesController extends Controller
         return view('pages.index')->with('products', $products);
 
     }
+    
+    
+    public function about()
+    {
+
+        return view('pages.about');
+
+    }
+    
+    public function contact()
+    {
+
+        return view('pages.contact');
+
+    }
 
 
 

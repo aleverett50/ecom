@@ -37,6 +37,8 @@
 }
 
 </style>
+
+		<!--
 		
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                     <span class="fa fa-chevron-left"></span>
@@ -46,6 +48,8 @@
                     <span class="fa fa-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
+		
+		-->
 		
 
             </div>
@@ -70,8 +74,10 @@ a .banner-block:hover{ background:#BE5886 }
 </style>    
 
 
-
     <div class="container mb-30 mt-40 mt-20-mob">
+    
+    <p class="text-center mt-40">This is a (scaled down) demo e-commerce site built using the Laravel Framework.</p>
+    
         <div class="row mb-0 mb-0-mob mt-30 mt-10-mob">
             <h2 class="top-go-to" style="font-weight: 600 !important;text-align: center;color:#707070 !important;text-transform: uppercase;">Latest Products</h2>
         </div>

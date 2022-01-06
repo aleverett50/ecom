@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-md-6">
                 <span style="position: relative;top:8px;">
-                    <span><i class="far fa-envelope pr-5" style="color:#cb889a;font-size: 12px;position: relative;top:1px;"></i> <span style="font-weight: 600;font-size: 12px;"><a href="mailto:info@">info@demosite.com</a></span></span>
+                    <span><i class="far fa-envelope pr-5" style="color:#cb889a;font-size: 12px;position: relative;top:1px;"></i> <span style="font-weight: 600;font-size: 12px;"><a href="mailto:info@">info@demosite.com</a> | <a href="/category/mens">Men's Category</a> | <a href="/category/womens">Women's Category</a>   </span></span>
                 </span>
 
 		
@@ -735,7 +735,7 @@ Welcome {{ auth()->user()->first_name }}
                 <div class=" " >
                     <p style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Information</p>
                     <p style="font-size: 14px;" class=""><a href="/">Home</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/about-us">About Us</a></p>
+                    <p style="font-size: 14px;" class=""><a href="/about">About Us</a></p>
                     <p style="font-size: 14px;" class=""><a href="/contact">Contact</a></p>
 
                 </div>
@@ -745,9 +745,9 @@ Welcome {{ auth()->user()->first_name }}
 
             <div class="col-md-4 text-center-mob mt-40-mob">
                     <p style="font-weight: 900;font-size: 14px;color:#e3bfcc;">Extras</p>
-                    <p style="font-size: 14px;" class=""><a href="/privacy">Privacy Policy</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/cookies">Cookie Policy</a></p>
-                    <p style="font-size: 14px;" class=""><a href="/delivery">Delivery Information</a></p>
+                    <p style="font-size: 14px;" class=""><a href="">Privacy Policy</a></p>
+                    <p style="font-size: 14px;" class=""><a href="">Cookie Policy</a></p>
+                    <p style="font-size: 14px;" class=""><a href="">Delivery Information</a></p>
             </div>
 	    
             <div class="col-md-4 mt-40-mob">

@@ -10,7 +10,10 @@ use App\Http\Controllers\CustomerAccountController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', [PagesController::class, 'index'] )->name('home');
+Route::get('/about', [PagesController::class, 'about'] )->name('about');
+Route::get('/contact', [PagesController::class, 'contact'] )->name('contact');
 Route::get('/product/{slug}', [ProductController::class, 'show'] )->name('product');
+Route::get('/category/{slug}', [ProductController::class, 'category'] )->name('category');
 Route::get('/basket', [CartItemController::class, 'index'] )->name('basket');
 Route::get('/checkout', [CartItemController::class, 'checkout'] )->name('checkout');
 Route::post('/checkout', [OrderController::class, 'store'] )->name('createOrder');
