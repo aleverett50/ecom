@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Order;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -30,5 +33,69 @@ class DashboardController extends Controller
         return view('dashboard.home');
 
     }
+    
+
+    public function orders()
+    {
+	
+	$orders = Order::all();
+	
+        return view('dashboard.orders')->with('orders', $orders);
+
+    }
+    
+
+    public function customers()
+    {
+	
+	$customers = User::where('user_role', '!=' , 2)->get();
+	
+        return view('dashboard.customers')->with('customers', $customers);
+
+    }
+    
+    
+    public function addProduct()
+    {
+	
+        return view('dashboard.product');
+
+    }
+    
+
+    public function product($id)
+    {
+	
+	$product = Product::findOrFail($id);
+	
+        return view('dashboard.product')->with('product', $product);
+
+    }
+    
+    
+    public function products()
+    {
+	
+	$products = Product::all();
+	
+        return view('dashboard.products')->with('products', $products);
+
+    }
+    
+    
+    public function order($id)
+    {
+    
+	$order = Order::findOrFail($id);
+	
+	/* get order items by relationship  */
+	
+	$order_items = $order->order_item()->get();
+
+        return view('dashboard.order')->with('order', $order)->with('order_items', $order_items);
+
+    }
+    
+    
     
 }

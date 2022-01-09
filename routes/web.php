@@ -39,6 +39,12 @@ Route::get('/reset-password/{token}', [LoginController::class, 'resetPassword'] 
 Route::post('/reset-password', [LoginController::class, 'resetPasswordPost'] )->name('password.reset.post');
 Route::get('/dashboard', [DashboardController::class, 'index'] )->name('dashboard')->middleware('customer')->middleware('admin');
 Route::get('/dashboard/home', [DashboardController::class, 'home'] )->name('dashboardHome');
+Route::get('/dashboard/orders', [DashboardController::class, 'orders'] )->name('dashboardOrders');
+Route::get('/dashboard/products', [DashboardController::class, 'products'] )->name('dashboardProducts');
+Route::get('/dashboard/customers', [DashboardController::class, 'customers'] )->name('dashboardCustomers');
+Route::get('/dashboard/order/{id}', [DashboardController::class, 'order'] )->name('dashboardViewOrder');
+Route::get('/dashboard/product/add', [DashboardController::class, 'addProduct'] )->name('dashboardAddProduct');
+Route::get('/dashboard/product/{id}', [DashboardController::class, 'product'] )->name('dashboardViewProduct');
 
 
 
