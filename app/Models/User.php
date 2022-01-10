@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Order;
 use App\Notifications\CustomPasswordResetNotification;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -84,6 +85,16 @@ class User extends Authenticatable
 		return false;
 	
 	}
+	
+	
+/*
+    public function setPasswordAttribute($value)
+    {
+
+        $this->attributes['password'] = Hash::make($value);
+
+    }
+*/
 
 
 

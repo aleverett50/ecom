@@ -18,6 +18,11 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {      
+    
+	/*
+	$user = new User;	
+	$user->create( $request->all() );
+	*/
 
       //  User::truncate();
 	Order::truncate();
@@ -69,6 +74,13 @@ class OrderController extends Controller
 
 	/* create uses the fillable array to mass assign field values - save() can save any values to the table, doesn't matter if they are in the fillable array or not. */
 	
+	/* could use this instead, as it takes all form posts and adds to each corresponding table field. As the password needs to be hashed, 
+	we could add public function setPasswordAttribute($value)  $this->attributes['password'] = Hash::make($value); in User model and set a rule for all password requests.
+
+	$user = new User;	
+	$user->create( $request->all() );
+	*/
+	
             $user = User::create([
             
                 'email' => $request->email,
@@ -89,14 +101,14 @@ class OrderController extends Controller
         //    $request->request->remove('password');
         //    $request->request->remove('email');
 
-	/* except removes the keys from the request if they are in the fillable array */
+	/* except removes the keys from the request if they are in the fillable array so won't be mass assigned */
 
             $user = auth()->user();
             $user->update($request->except('password', 'email'));
 
         }
 
-	exit;
+	
 
         $shipping = session()->has('shipping') 
                             ? session('shipping') : 3.99;

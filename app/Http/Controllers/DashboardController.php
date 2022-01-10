@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\Order;
 use App\Models\User;
 
@@ -61,27 +62,41 @@ class DashboardController extends Controller
 
 		$files = [];
 		
-		if( $request->hasfile( 'files' ) ){
+		for($i = 1; $i < 3; $i++){
 		
-			$i = 1;
-		
-			foreach( $request->file('files') as $file ){
+			if( $request->hasfile( 'image-'.$i ) ){			
 			
-				$name = time().'-'.$i.'.'.$file->extension();
+				    $this->validate($request, [
+				    
+					 'image-'.$i => 'mimes:jpg,jpeg,png|max:2048000000',
+					
+				    ]);
+					
+					$file = $request->file('image-'.$i);
 				
-				$file->move(public_path('product-images'), $name);
-				
-				$files[] = $name;
-				
-				$i++;
+					$name = time().'-'.$i.'.'.$file->extension();
+					
+					$file->move(public_path('product-images'), $name);
+					
+					$files[] = $name;
+			
+			}else{
+			
+					$files[] = '';
 			
 			}
 		
 		}
+
 		
             $product = new Product;
 	    
 	    $product->files = $files;
+	    $product->category_id = $request->category_id;
+	    $product->title = $request->title;
+	    $product->slug = $request->slug;
+	    $product->price = $request->price;
+	    $product->description = $request->description;
 	    $product->save();
 	    
 	    exit;
@@ -92,9 +107,9 @@ class DashboardController extends Controller
     public function addProduct()
     {
     
+	$categories = Category::all();
 	
-	
-        return view('dashboard.product');
+        return view('dashboard.product')->with('categories', $categories);
 
     }
     
@@ -102,9 +117,10 @@ class DashboardController extends Controller
     public function product($id)
     {
 	
+	$categories = Category::all();
 	$product = Product::findOrFail($id);
 	
-        return view('dashboard.product')->with('product', $product);
+        return view('dashboard.product')->with('product', $product)->with('categories', $categories);
 
     }
     
