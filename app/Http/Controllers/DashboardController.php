@@ -30,6 +30,7 @@ class DashboardController extends Controller
     public function home()
     {
 
+	return redirect('dashboard/orders');
         return view('dashboard.home');
 
     }
@@ -55,8 +56,43 @@ class DashboardController extends Controller
     }
     
     
+	public function store(Request $request)
+	{
+
+		$files = [];
+		
+		if( $request->hasfile( 'files' ) ){
+		
+			$i = 1;
+		
+			foreach( $request->file('files') as $file ){
+			
+				$name = time().'-'.$i.'.'.$file->extension();
+				
+				$file->move(public_path('product-images'), $name);
+				
+				$files[] = $name;
+				
+				$i++;
+			
+			}
+		
+		}
+		
+            $product = new Product;
+	    
+	    $product->files = $files;
+	    $product->save();
+	    
+	    exit;
+
+	}
+    
+    
     public function addProduct()
     {
+    
+	
 	
         return view('dashboard.product');
 

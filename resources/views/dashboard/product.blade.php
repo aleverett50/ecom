@@ -12,7 +12,7 @@
 <div class="container pb-40">
 
 
-					<form enctype="multipart/form-data" class="form-horizontal" method="post" action="" >
+					<form enctype="multipart/form-data" class="form-horizontal" method="post" action="/dashboard/product/add">
 					
 					@csrf
 					
@@ -44,6 +44,21 @@
 									<label class="col-md-4 control-label">Description</label>
 									<div class="col-md-6 pt-7">
 									<textarea name="description" class="form-control">{{ $product->description ?? '' }}</textarea>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-md-4 control-label">Image 1</label>
+									<div class="col-md-6 pt-7">
+									<input class="form-control" type="file" name="files[]">
+									</div>
+								</div>								
+								
+								
+								<div class="form-group">
+									<label class="col-md-4 control-label">Image 2</label>
+									<div class="col-md-6 pt-7">
+									<input class="form-control" type="file" name="files[]">
 									</div>
 								</div>
 								

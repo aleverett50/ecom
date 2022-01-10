@@ -19,10 +19,9 @@ class OrderController extends Controller
     public function store(Request $request)
     {      
 
-
       //  User::truncate();
-      Order::truncate();
-        OrderItem::truncate();
+	Order::truncate();
+	OrderItem::truncate();
 
         $cart = CartItem::where('unique_id', session('unique_id'));
 
@@ -68,7 +67,8 @@ class OrderController extends Controller
 
         if( ! auth()->check() ){
 
-
+	/* create uses the fillable array to mass assign field values - save() can save any values to the table, doesn't matter if they are in the fillable array or not. */
+	
             $user = User::create([
             
                 'email' => $request->email,
@@ -86,14 +86,17 @@ class OrderController extends Controller
 
         }else{
 
-            $request->request->remove('password');
-            $request->request->remove('email');
+        //    $request->request->remove('password');
+        //    $request->request->remove('email');
+
+	/* except removes the keys from the request if they are in the fillable array */
 
             $user = auth()->user();
-            $user->update($request->all());
+            $user->update($request->except('password', 'email'));
 
         }
 
+	exit;
 
         $shipping = session()->has('shipping') 
                             ? session('shipping') : 3.99;

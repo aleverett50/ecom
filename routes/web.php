@@ -44,6 +44,7 @@ Route::get('/dashboard/products', [DashboardController::class, 'products'] )->na
 Route::get('/dashboard/customers', [DashboardController::class, 'customers'] )->name('dashboardCustomers');
 Route::get('/dashboard/order/{id}', [DashboardController::class, 'order'] )->name('dashboardViewOrder');
 Route::get('/dashboard/product/add', [DashboardController::class, 'addProduct'] )->name('dashboardAddProduct');
+Route::post('/dashboard/product/add', [DashboardController::class, 'store'] )->name('dashboardAddProductPost');
 Route::get('/dashboard/product/{id}', [DashboardController::class, 'product'] )->name('dashboardViewProduct');
 
 

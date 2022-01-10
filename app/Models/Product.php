@@ -17,4 +17,14 @@ class Product extends Model
 
     }
     
+    
+    public function setFilesAttribute($value)
+    {
+
+        $this->attributes['files'] = json_encode($value);
+
+    }
+    
+
+    
 }
