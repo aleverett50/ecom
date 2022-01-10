@@ -46,6 +46,7 @@ Route::get('/dashboard/order/{id}', [DashboardController::class, 'order'] )->nam
 Route::get('/dashboard/product/add', [DashboardController::class, 'addProduct'] )->name('dashboardAddProduct');
 Route::post('/dashboard/product/add', [DashboardController::class, 'store'] )->name('dashboardAddProductPost');
 Route::get('/dashboard/product/{id}', [DashboardController::class, 'product'] )->name('dashboardViewProduct');
+Route::post('/dashboard/product/{id}', [DashboardController::class, 'updateProduct'] )->name('dashboardEditProduct');
 
 
 

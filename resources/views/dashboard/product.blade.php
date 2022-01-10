@@ -12,7 +12,7 @@
 <div class="container pb-40">
 
 
-					<form enctype="multipart/form-data" class="form-horizontal" method="post" action="/dashboard/product/add">
+					<form enctype="multipart/form-data" class="form-horizontal" method="post" action="/dashboard/product/{{ $product->id ?? 'add' }}">
 					
 					@csrf
 					
@@ -27,7 +27,7 @@
 									<select class="form-control" name="category_id">
 										<option value="">Select Category</option>
 										@foreach( $categories as $category )
-										<option value="{{ $category->id }}">{{ $category->title }}</option>
+										<option value="{{ $category->id }}" @if(isset($product) && $category->id == $product->category_id ) selected @endif >{{ $category->title }}</option>
 										@endforeach
 									</select>
 									
@@ -65,6 +65,13 @@
 									<label class="col-md-4 control-label">Image 1</label>
 									<div class="col-md-6 pt-7">
 									<input class="form-control" type="file" name="image-1">
+									
+									@if( isset($product) && $product->files[0] != '' )
+									<br>
+									<img width="150" src="/product-images/{{ $product->files[0] }}">
+									
+									@endif
+									
 									</div>
 								</div>								
 								
@@ -73,12 +80,20 @@
 									<label class="col-md-4 control-label">Image 2</label>
 									<div class="col-md-6 pt-7">
 									<input class="form-control" type="file" name="image-2">
+									
+									@if( isset($product) && $product->files[1] != '' )
+									<br>
+									<img width="150" src="/product-images/{{ $product->files[1] }}">
+									
+									@endif
+									
 									</div>
 								</div>
 								
 								<div class="form-group">
 									<label class="col-md-4 control-label"></label>
 									<div class="col-md-6 pt-7">
+									<br>
 									<button type="submit" class="btn btn-primary">SUBMIT</button>
 									</div>
 								</div>

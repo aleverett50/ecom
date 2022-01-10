@@ -99,7 +99,55 @@ class DashboardController extends Controller
 	    $product->description = $request->description;
 	    $product->save();
 	    
-	    exit;
+	    return redirect('dashboard/products')->withSuccess('The product has been added');
+	    
+
+	}
+	
+	
+	public function updateProduct(Request $request, $id)
+	{
+		
+            $product = Product::findOrFail($id);
+	    
+		$files = [];
+		
+		for($i = 1; $i < 3; $i++){
+		
+			if( $request->hasfile( 'image-'.$i ) ){			
+			
+				    $this->validate($request, [
+				    
+					 'image-'.$i => 'mimes:jpg,jpeg,png|max:2048000000',
+					
+				    ]);
+					
+					$file = $request->file('image-'.$i);
+				
+					$name = time().'-'.$i.'.'.$file->extension();
+					
+					$file->move(public_path('product-images'), $name);
+					
+					$files[] = $name;
+			
+			}else{
+			
+					$files[] = $product->files[$i-1];
+			
+			}
+		
+		}
+	    
+		$product->files = $files;
+		$product->category_id = $request->category_id;
+		$product->title = $request->title;
+		$product->slug = $request->slug;
+		$product->price = $request->price;
+		$product->description = $request->description;
+		$product->save();
+	    
+	    return redirect('dashboard/products')->withSuccess('The product has been updated');
+	    
 
 	}
     

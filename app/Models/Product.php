@@ -25,6 +25,16 @@ class Product extends Model
 
     }
     
+    
+    public function getFilesAttribute($value)
+    {
+    
+	/* create an array from the json string */
+
+        return json_decode($value, true);
+
+    }
+    
 
     
 }
