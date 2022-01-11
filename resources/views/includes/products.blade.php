@@ -3,7 +3,7 @@
 	    
 	<div class="pc-product-image">
 		<a href="/product/{{ $product->slug }}">
-		<img src="/product-images/{{ $product->id }}.jpg" class="img-responsive">
+		<img src="/product-images/{{ $product->files[0] }}" class="img-responsive">
 		</a>
 	</div>
       

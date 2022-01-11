@@ -16,11 +16,11 @@
 
 	<table class="table table-hover">
 
-	<tr><td><strong>Title</strong></td><td><strong>Category</strong></td><td><strong></strong></td></tr>
+	<tr><td><strong>Image</strong></td><td><strong>Title</strong></td><td><strong>Category</strong></td><td><strong></strong></td></tr>
 	
 	@foreach($products as $product)
 	
-	<tr><td> {{ $product->title }}</td><td>{{ $product->category->title }} </td><td><a class="btn btn-primary" href="/dashboard/product/{{ $product->id }}">Edit <i class="fa fa-edit"></i></a></td></tr>
+	<tr><td> <img width="100" src="/product-images/{{ $product->files[0] }}"> </td><td> {{ $product->title }}</td><td>{{ $product->category->title }} </td><td><a class="btn btn-primary" href="/dashboard/product/{{ $product->id }}">Edit <i class="fa fa-edit"></i></a></td></tr>
 	
 	@endforeach
 	

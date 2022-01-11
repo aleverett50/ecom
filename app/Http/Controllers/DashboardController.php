@@ -7,9 +7,12 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Order;
 use App\Models\User;
+use App\Traits\UploadImage;
 
 class DashboardController extends Controller
 {
+
+	use UploadImage;
 
     public function __construct()
     {
@@ -31,7 +34,7 @@ class DashboardController extends Controller
     public function home()
     {
 
-	return redirect('dashboard/orders');
+	return redirect('dashboard/products');
         return view('dashboard.home');
 
     }
@@ -59,39 +62,12 @@ class DashboardController extends Controller
     
 	public function store(Request $request)
 	{
-
-		$files = [];
-		
-		for($i = 1; $i < 3; $i++){
-		
-			if( $request->hasfile( 'image-'.$i ) ){			
-			
-				    $this->validate($request, [
-				    
-					 'image-'.$i => 'mimes:jpg,jpeg,png|max:2048000000',
-					
-				    ]);
-					
-					$file = $request->file('image-'.$i);
-				
-					$name = time().'-'.$i.'.'.$file->extension();
-					
-					$file->move(public_path('product-images'), $name);
-					
-					$files[] = $name;
-			
-			}else{
-			
-					$files[] = '';
-			
-			}
-		
-		}
-
-		
+	
             $product = new Product;
 	    
-	    $product->files = $files;
+	    /* uploadImages comes from UploadImage trait */
+	    
+	    $product->files = $this->uploadImages($product, $request, 2,  'product-images', 'add');
 	    $product->category_id = $request->category_id;
 	    $product->title = $request->title;
 	    $product->slug = $request->slug;
@@ -110,35 +86,8 @@ class DashboardController extends Controller
 		
             $product = Product::findOrFail($id);
 	    
-		$files = [];
+		$product->files = $this->uploadImages($product, $request, 2, 'product-images', 'update');
 		
-		for($i = 1; $i < 3; $i++){
-		
-			if( $request->hasfile( 'image-'.$i ) ){			
-			
-				    $this->validate($request, [
-				    
-					 'image-'.$i => 'mimes:jpg,jpeg,png|max:2048000000',
-					
-				    ]);
-					
-					$file = $request->file('image-'.$i);
-				
-					$name = time().'-'.$i.'.'.$file->extension();
-					
-					$file->move(public_path('product-images'), $name);
-					
-					$files[] = $name;
-			
-			}else{
-			
-					$files[] = $product->files[$i-1];
-			
-			}
-		
-		}
-	    
-		$product->files = $files;
 		$product->category_id = $request->category_id;
 		$product->title = $request->title;
 		$product->slug = $request->slug;

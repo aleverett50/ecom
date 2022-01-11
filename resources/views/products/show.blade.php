@@ -27,12 +27,12 @@
 		<ol class="carousel-indicators">
 
 			<li data-target="#myCarousel" data-slide-to="0" class="active">
-			<img class="img-responsive hidden-xs hidden-sm" src="/product-images/1.jpg" alt="Thumbnail Product 1">
+			<img class="img-responsive hidden-xs hidden-sm" src="/product-images/{{ $product->files[0] }}" alt="Thumbnail Product 1">
 			</li>
 			
 						
 			<li data-target="#myCarousel" data-slide-to="1">
-			<img class="img-responsive hidden-xs hidden-sm" src="/product-images/2.jpg" alt="Thumbnail Product 2">
+			<img class="img-responsive hidden-xs hidden-sm" src="/product-images/{{ $product->files[1] }}" alt="Thumbnail Product 2">
 			</li>										
 						
 		</ol> 
@@ -45,12 +45,12 @@
 		  <div class="carousel-inner" role="listbox">
 		  
 			    <div class="item active">
-			     <a href="/product-images/1.jpg" data-lightbox="example-set" data-title="{{$product->title}}"> <img class="img-responsive" style="width:100%" src="/product-images/1.jpg" alt="Product 1">  </a>
+			     <a href="/product-images/{{ $product->files[0] }}" data-lightbox="example-set" data-title="{{$product->title}}"> <img class="img-responsive" style="width:100%" src="/product-images/{{ $product->files[0] }}" alt="Product 1">  </a>
 			    </div>
 			    
 			    			    
 			    <div class="item">
-			     <a href="/product-images/2.jpg" data-lightbox="example-set" data-title="{{$product->title}}"> <img class="img-responsive" src="/product-images/2.jpg" alt="Product 2">  </a>
+			     <a href="/product-images/{{ $product->files[1] }}" data-lightbox="example-set" data-title="{{$product->title}}"> <img class="img-responsive" src="/product-images/{{ $product->files[1] }}" alt="Product 2">  </a>
 			    </div>
 
 		  </div>
